@@ -1531,6 +1531,13 @@ endif
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DT)),true)
 	$(hide) $(ACP) $(INSTALLED_DTIMAGE_TARGET) $(zip_root)/RECOVERY/dt
 endif
+
+ifdef TARGET_USE_BUILT_BOOTIMAGE
+	@# Copy boot.img to bootable_images
+	$(hide) mkdir -p $(zip_root)/BOOTABLE_IMAGES
+	$(hide) $(ACP) $(TARGET_USE_BUILT_BOOTIMAGE) $(zip_root)/BOOTABLE_IMAGES
+endif
+
 	@# Components of the boot image
 	$(hide) mkdir -p $(zip_root)/BOOT
 	$(hide) $(call package_files-copy-root, \
