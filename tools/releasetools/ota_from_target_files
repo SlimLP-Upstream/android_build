@@ -593,22 +593,20 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
 
-  
-  script.Print(" SlimLP Mod by diegocr & csolanol @ xda")
-  script.Print(" ")
-  script.Print("                    _____________________ ")
-  script.Print("                   /    www.slimroms.org |")
-  script.Print("                  /                      |")
-  script.Print("                 /    ___________________|")
-  script.Print("                /    /    ___             ")
-  script.Print("               /    / ___/   \            ")
-  script.Print("              /    / /   \___/____   ____ ")
-  script.Print("             /    /  |   |___/    \_/    |")
-  script.Print(" ___________/    /   |   |   |           |")
-  script.Print("|               /    |   |   |   |   |   |")
-  script.Print("|              /     |   |   |   |   |   |")
-  script.Print("|_____________/      \___^___^___^___^___/")
-  script.Print(" ")
+  script.Print("'             SlimLP Mod built by              ")
+  script.Print("'        diegocr, csolanol & lovejoy777        ")
+  script.Print("'  ______       ___             ___    _____   ")
+  script.Print("' /      \  ___/   \           /   \  /     \  ")
+  script.Print("'/        \/   \___/____   ____|   |  |   0  | ")
+  script.Print("'|    \___/|   |___/    \_/    |   |  |      | ")
+  script.Print("'\        \|   |   |           |   |  |    _/  ")
+  script.Print("' \___/    |   |   |   |   |   |   |__|   |    ")
+  script.Print("' /        |   |   |   |   |   |      |   |    ")
+  script.Print("' \_______/\___^___^___^___^___^______^___/    ")
+  script.Print("'                  SLIMROMS.NET                ")
+  script.Print("'                                              ")
+  script.Print("'                For Amazon Ford               ")
+  script.Print("'                                              ")
 
   build = GetBuildProp("ro.build.date", OPTIONS.info_dict)
   script.Print("Compiled: %s"%(build));
