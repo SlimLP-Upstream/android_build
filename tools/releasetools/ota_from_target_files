@@ -593,8 +593,8 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   system_progress = 0.75
 
-  script.Print("'             SlimLP Mod built by              ")
-  script.Print("'        diegocr, csolanol & lovejoy777        ")
+  script.Print("'                SlimLP built by               ")
+  script.Print("'                    R0rt1z2                   ")
   script.Print("'  ______       ___             ___    _____   ")
   script.Print("' /      \  ___/   \           /   \  /     \  ")
   script.Print("'/        \/   \___/____   ____|   |  |   0  | ")
@@ -603,9 +603,10 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("' \___/    |   |   |   |   |   |   |__|   |    ")
   script.Print("' /        |   |   |   |   |   |      |   |    ")
   script.Print("' \_______/\___^___^___^___^___^______^___/    ")
-  script.Print("'                  SLIMROMS.NET                ")
+  script.Print("'                 SLIMROMS.ORG                 ")
   script.Print("'                                              ")
-  script.Print("'                For Amazon Ford               ")
+  script.Print("'           For Amazon Fire HD8 2017           ")
+  script.Print("'                  (douglas)                   ")
   script.Print("'                                              ")
 
   build = GetBuildProp("ro.build.date", OPTIONS.info_dict)
@@ -699,13 +700,6 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
     script.RunBackup("restore")
     if block_based:
       script.Unmount("/system")
-
-  if block_based:
-    script.Print("Flashing SuperSU...")
-    common.ZipWriteStr(output_zip, "supersu/supersu.zip",
-                   ""+input_zip.read("SYSTEM/addon.d/UPDATE-SuperSU.zip"))
-    script.Mount("/system")
-    script.FlashSuperSU()
 
   script.ShowProgress(0.05, 5)
   script.WriteRawImage("/boot", "boot.img")
